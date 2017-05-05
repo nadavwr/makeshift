@@ -4,7 +4,7 @@ To use it:
 
 ```scala
 resolvers += Resolver.bintrayRepo("nadavwr", "maven")
-libraryDependencies += "com.github.nadavwr" %%% "makeshift" % "0.1.0"
+libraryDependencies += "com.github.nadavwr" %%% "makeshift" % "0.1.1"
 ```
 
 * Unit tests are aggregated under `Spec` instances.
