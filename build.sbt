@@ -40,7 +40,10 @@ lazy val unpublished = Def.settings(
 
 lazy val makeshift = crossProject(JVMPlatform, NativePlatform)
   .crossType(CrossType.Pure)
-  .settings(commonSettings)
+  .settings(
+    commonSettings,
+    moduleName := "makeshift"
+  )
 
 lazy val makeshiftJVM = makeshift.jvm
 lazy val makeshiftNative = makeshift.native
