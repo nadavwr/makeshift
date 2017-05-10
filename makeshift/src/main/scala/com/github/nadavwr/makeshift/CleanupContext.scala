@@ -1,8 +1,6 @@
 package com.github.nadavwr.makeshift
 
 import scala.collection.mutable
-import scala.scalanative.native._
-import scala.util.control.NonFatal
 
 class CleanupContext {
   lazy val cleanups: mutable.Buffer[CleanupEntry] = mutable.ListBuffer.empty

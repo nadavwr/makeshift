@@ -1,6 +1,5 @@
 package com.github.nadavwr.makeshift
 import scala.util.Try
-import scalanative.native._
 
 trait Spec {
   protected implicit lazy val cleanupContext: CleanupContext = new CleanupContext
