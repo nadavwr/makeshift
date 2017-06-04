@@ -55,9 +55,6 @@ lazy val makeshiftTest = crossProject(JVMPlatform, NativePlatform)
     unpublished,
     test := { (run in Compile).toTask("").value }
   )
-  .nativeSettings(
-    run in Compile := { run.toTask("").value }
-  )
   .dependsOn(makeshift)
 
 lazy val makeshiftTestJVM = makeshiftTest.jvm
