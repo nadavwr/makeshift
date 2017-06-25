@@ -60,12 +60,13 @@ lazy val makeshiftTest = crossProject(JVMPlatform, NativePlatform)
 lazy val makeshiftTestJVM = makeshiftTest.jvm
 lazy val makeshiftTestNative = makeshiftTest.native
 
-lazy val makeshiftRoot = (project in file("."))
-  .settings(
-    commonSettings,
-    unpublished,
-    commands += crossAlias("publishLocal", "publishLocal", "makeshift"),
-    commands += crossAlias("publish", "publish", "makeshift"),
-    commands += crossAlias("test", "test", "makeshiftTest"),
-    commands += forallAlias("clean", "clean", "makeshift", "makeshiftTest")
-  )
+lazy val makeshiftRoot =
+  (project in file("."))
+    .settings(
+      commonSettings,
+      unpublished,
+      commands += crossAlias("publishLocal", "publishLocal", "makeshift"),
+      commands += crossAlias("publish", "publish", "makeshift"),
+      commands += crossAlias("test", "test", "makeshiftTest"),
+      commands += forallAlias("clean", "clean", "makeshift", "makeshiftTest")
+    )
