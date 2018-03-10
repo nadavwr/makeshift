@@ -1,7 +1,6 @@
-import sbtcrossproject.{crossProject, CrossType}
+val Scala_2_12 = "2.12.4"
+val Scala_2_11 = "2.11.12"
 
-val Scala_2_12 = "2.12.2"
-val Scala_2_11 = "2.11.11"
 def crossAlias(aliasName: String, commandName: String, projectNames: String*): Command =
   BasicCommands.newAlias(aliasName, {
     projectNames
